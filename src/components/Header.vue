@@ -11,8 +11,6 @@ div{
     position: absolute;
     width: 1016px;
     height: 104px;
-    left: 0px;
-    top: 0px;
     background-color:  #ff0000;
     display:flex;
     align-items: center;

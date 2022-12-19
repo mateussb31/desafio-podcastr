@@ -1,6 +1,6 @@
 <template>
     <div class="fundo">
-        <p class="agora">TOCANDO AGORA</p>
+        <img src="../assets/Top.png" alt="TOCANDO AGORA" class="agora">
         <div class="player">
             <p>Selecione um<br>podcast para ouvir</p>
         </div>
@@ -9,10 +9,10 @@
         </div>
         <div class="botoes">
             <button id="shuffle"></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button id="previous"></button>
+            <button id="play"></button>
+            <button id="next"></button>
+            <button id="repeat"></button>
             
         </div>
     </div>
@@ -23,29 +23,31 @@
  background-color: #8257E5;
  width: 424px;
  height: 820px;
- right: 0;
- position: absolute;
  display: flex;
  flex-direction: column;
  align-items: center;
 }
 .agora{
     order: 1;
-    margin-bottom: 126px;
+    margin-top: 5%;
+    
 }
 .player{
     background:linear-gradient(#9164FA,#9164FA00);
     width: 296px;
     height: 346px;
+    margin-top: 126px;
     margin-bottom: 126px;
     order: 2;
     border-radius: 24px;
     text-align: center;
-    align-items: center;
     justify-content: center;
     border-style: dashed;
     border-color: #9F75FF;
     color:#ffffff ;
+}
+.player>p{
+    margin-top: 50%; 
 }
 .progress-bar{
     order: 3;
@@ -55,18 +57,43 @@
 }
 .botoes{
     order: 4;
+    width: 256px;
     margin-bottom: 48px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
-#shuffle
+button
 {
-  margin: 0 auto;
-  top: 25%;
-  position: relative;  
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 2.5em 0 2.5em 5em;
-  
-  opacity: .75; 
+  width: 24px;
+  height: 24px;
+  background-color:#8257E5 ;
+  border: none;
+}
+#shuffle{
+    background-image: url('../assets/shuffle.png');
+
+}
+#previous{
+    background-image: url('../assets/play-previous.png');
+}
+#play{
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #9164FA;
+    background-image: url('../assets/play.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+
+}
+#next{
+    background-image: url('../assets/play-next.png');
+}
+#repeat{
+    background-image: url('../assets/repeat.png');
 }
 </style>
