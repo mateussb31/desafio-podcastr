@@ -1,23 +1,24 @@
 
 <script setup lang="ts">
-import HeaderVue from './components/Header.vue';
-import PlayerVue from './components/Player.vue';
-import MainVue from './components/Main.vue';
+import Header from './components/Header.vue';
+import Player from './components/Player.vue';
+import Main from './components/Main.vue';
+import Lancamentos from './components/Lancamentos.vue';
 </script>
 
 <template>
   <header>
-    <HeaderVue></HeaderVue>
+    <Header></Header>
   </header>
   <main>
-    <MainVue></MainVue>
+    <Lancamentos></Lancamentos>
+    <Main></Main>
   </main>
-  <aside><PlayerVue></PlayerVue></aside>
+  <aside>
+    <Player></Player>
+  </aside>
 </template>
 
 <style scoped>
-template{
-  display: grid;
-  background-color: red;
-}
+
 </style>

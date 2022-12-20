@@ -20,9 +20,8 @@
 
 <style scoped>
 .fundo{
+    height: 100vh;
  background-color: #8257E5;
- width: 424px;
- height: 820px;
  display: flex;
  flex-direction: column;
  align-items: center;

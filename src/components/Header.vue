@@ -1,6 +1,6 @@
 <template class ="teste">
     <div>
-        <h1>Podcastr</h1>
+        <img src="../assets/Logo.png" alt="PODCASTR">
         <p id="texto"> O melhor para você ouvir, sempre</p>
         <p id="data">data, data2</p>
     </div>    
@@ -8,17 +8,15 @@
 
 <style scoped>
 div{
-    position: absolute;
-    width: 1016px;
-    height: 104px;
-    background-color:  #ff0000;
+    height: 104px; 
+    background-color:  #ffffff;
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
-h1{
+img{
     margin-left: 58px;
-    margin-top: 11px;
+    margin-bottom: 32px;
     order: 1;
     
 }
