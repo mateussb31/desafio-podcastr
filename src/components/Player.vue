@@ -1,3 +1,4 @@
+
 <template>
     <div class="fundo">
         <img src="../assets/Top.png" alt="TOCANDO AGORA" class="agora">
@@ -18,9 +19,11 @@
     </div>
 </template>
 
+
+
 <style scoped>
 .fundo{
-    height: 100vh;
+ height: 100vh;
  background-color: #8257E5;
  display: flex;
  flex-direction: column;

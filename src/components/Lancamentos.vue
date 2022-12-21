@@ -30,7 +30,7 @@ margin-bottom: 24px;
 
 .secao{
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-around;  
 }
 .lancamento{
     display: inline;

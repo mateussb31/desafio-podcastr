@@ -1,15 +1,20 @@
 #app {
-    background-color: #E5E5E5;
+    background-color: #F7F8FA;
     display: grid;
-    grid-template-columns: 70vw 30vw;
-    grid-template-rows: 20vh 30vh 50vh;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    grid-template-columns: 70.5vw 29.5vw;
+    grid-template-rows: 12.6vh 29.7vh 57.7vh;
     /* grid-template:
     "header header header header aside"
     "main main main main aside"
     "main main main main aside"
     "main main main main aside"; */
 }
-
+body{
+    margin: 0px;
+}
 header {
     grid-column-start: 1;
     grid-column-end: 2;

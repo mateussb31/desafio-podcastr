@@ -8,7 +8,8 @@
 
 <style scoped>
 div{
-    height: 104px; 
+    height: 100%;
+    width: 100%; 
     background-color:  #ffffff;
     display:flex;
     align-items: center;

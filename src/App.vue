@@ -20,5 +20,7 @@ import Lancamentos from './components/Lancamentos.vue';
 </template>
 
 <style scoped>
-
+template{
+  margin: 10px;
+}
 </style>
