@@ -1,8 +1,9 @@
 #app {
     background-color: #F7F8FA;
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     box-sizing: border-box;
     grid-template-columns: 70.5vw 29.5vw;
     grid-template-rows: 12.6vh 29.7vh 57.7vh;

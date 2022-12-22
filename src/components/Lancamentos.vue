@@ -1,26 +1,33 @@
 <template>
 <h2>Ultimos Lancçamentos</h2>
     <div class="secao">
-        
-        <div class="lancamento">
-            <img src="" alt="Imagem"/>
-            <p id="Titulo">Exemplo Exemplo Exemplp</p>
-            <p id="Nomes">Nomes </p>
-            <p id="Pequenos">data</p>
-            <p id="Pequenos">tempo</p>
-            <button class="play"></button>
-        </div>
-        <div class="lancamento">
-            <img src="" alt="Imagem"/>
-            <p id="Titulo">Exemplo Exemplo Exemplp</p>
-            <p id="Nomes">Nomes </p>
-            <p id="Pequenos">data</p>
-            <p id="Pequenos">tempo</p>
+        <div v-for="item in listaEpsodios.slice(-2)" class="lancamento">
+            
+            <img :src=item.thumbnail alt="Thumbnail podcast"/>
+            <p id="Titulo">{{item.title}}</p>
+            <p id="Nomes">{{item.members}}</p>
+            <p id="Pequenos">{{item.published_at.split(' ')[0]}}</p>
+            <p id="Pequenos">{{converteTempo(item.file.duration)}}</p>
             <button class="play"></button>
         </div>
     </div>
 
 </template>
+
+<script lang="ts">
+import epsodes from "../assets/epsodes.json"
+import {converteTempo} from "../utils/conversor.vue"
+export default {
+    data() {
+        return {
+            listaEpsodios: epsodes
+        }
+    },
+    methods:{
+        converteTempo,
+    },
+}
+</script>
 
 <style scoped>
 h2{
@@ -43,24 +50,28 @@ margin-bottom: 24px;
 }
 .lancamento >p{
     color: #494D4B;
-    font-size: 16px;
-}
-.lancamento >p{
     font-size: 14px;
     line-height: 17px;
-    
+    max-width: 60%;
+    max-height: 14%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 img{
     margin: 20px;
     width: 96px;
     height: 96px;
     float: left;
+    border-radius: 12px;
 }
 #Titulo{
+    font-size: 16px;
+    
     color: #494D4B;
     margin-top: 29px;
     margin-bottom: 0px;
-
+    margin-left: 116px;
 }
 #Nomes{
     color: #808080;

@@ -19,29 +19,36 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody v-for="ep,index in listaEpsodios" :key="ep.id">
-                <tr v-if="index<5"  >
+            <tbody v-for="ep, index in listaEpsodios.slice(2)" :key="ep.id">
+                <tr v-if="index < 5">
                     <p>
                         <img :src="ep.thumbnail" />
-                    <p style="float: left;margin: 22px 0px; white-space: nowrap; text-overflow: ellipsis;overflow: hidden;max-width: 329px;">{{ep.title}}</p>
+                    <p style="float: left;margin: 22px 0px; text-overflow: ellipsis;overflow: hidden;max-width: 80%;">
+                        {{ ep.title }}</p>
                     </p>
                     <td> {{ ep.members }}</td>
-                    <td> {{ ep.published_at.split(" ")[0] }}</td>
-                    <td> {{ep.published_at.split(" ")[1]}}</td>
+                    <td> {{ converteData(ep.published_at.split(" ")[0]) }}</td>
+                    <td> {{converteTempo(ep.file.duration)}}</td>
                     <td><button></button></td>
                 </tr>
-            </tbody >
+            </tbody>
         </table>
     </div>
 </template>
 
 <script lang="ts">
+import { converteTempo,converteData } from "@/utils/conversor.vue";
 import epsodes from "../assets/epsodes.json"
+
 export default {
     data() {
         return {
             listaEpsodios: epsodes
         }
+    },
+    methods: {
+        converteTempo,
+        converteData,
     }
 }
 </script>
